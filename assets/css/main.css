@@ -313,7 +313,20 @@
 	padding: 0 8px;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+
 }
+
+.header-with-search-icon{
+	display: none;
+	padding: 0 12px;
+}
+
+.header-with-search-icon i{
+	font-size: 2.6rem;
+	color: var(--white-color);
+}
+
 .header__logo{
 	width: 190px;
 	height: 100%;
@@ -330,6 +343,7 @@
 	align-self: center;
 	height: 50px;
 }
+
 .header__search{
 	flex: 1;
 	height: 40px;
@@ -661,6 +675,53 @@
 }
 .header__cart-list-view-cart:hover{
 	background: rgba(255,151,151,0.4);
+}
+
+.header__sort-bar{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	background-color: var(--white-color);
+	height: var(--header__sort-bar-height);
+	/*display: flex;*/
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	position: fixed;
+	top: var(--height-search);
+	left: 0;
+	width: 100%;
+	display: none;
+}
+
+.header__sort-bar-item{
+	flex: 1;
+}
+
+.header__sort-bar-link{
+	text-decoration: none;
+	font-size: 1.4rem;
+	color: var(--text-color);
+	display: block;
+	line-height: var(--header__sort-bar-height);
+	text-align: center;
+	position: relative;
+}
+
+.header__sort-bar-link::after{
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 0;
+	height: 60%;
+	border-left: 1px solid #e5e5e5;
+	transform: translateY(-50%);
+}
+.header__sort-bar-item:first-child  .header__sort-bar-link::after {
+	display: none;
+}
+
+.header__sort-bar-item--active .header__sort-bar-link{
+	color: var(--main-color);
 }
 
 /*Phần tự làm của Vương đẹp trai*/
