@@ -8,6 +8,7 @@
 	--header__navbar-height: 34px;
 	--header-search-height: calc(var(--header-height) - var(--header__navbar-height));
 	--star-gold-rating: #FFC856;
+	--header__sort-bar-height: 46px;
 }
 *{
 	box-sizing: inherit;
@@ -19,14 +20,6 @@ html{
 	box-sizing: border-box;
 }
 /*responsive */
-.grid{
-	width: 1220px;
-	max-width: 100%;
-	margin: 0 auto;
-}
-.grid__full-width{
-	width: 100%;
-}
 .grid__row{
 	display: flex;
 	flex-wrap: wrap;
