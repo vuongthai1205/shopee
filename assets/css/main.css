@@ -341,7 +341,7 @@
 }
 .header__logo-img{
 	align-self: center;
-	height: 50px;
+	width: 150px;
 }
 
 .header__search{
@@ -689,6 +689,7 @@
 	position: fixed;
 	top: var(--height-search);
 	left: 0;
+	right: 0;
 	width: 100%;
 	display: none;
 }
@@ -722,6 +723,7 @@
 
 .header__sort-bar-item--active .header__sort-bar-link{
 	color: var(--main-color);
+	border-bottom: 1px solid var(--main-color);
 }
 
 /*Phần tự làm của Vương đẹp trai*/
@@ -1076,6 +1078,62 @@
 	color: #cfcfcf;
 }
 
+.home-category-mobile{
+	display: none;
+}
+
+.home-category-mobile__list{
+	display: flex;
+	list-style: none;
+	/*overflow-x: auto;*/
+	padding-left: 0;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.home-category-mobile__list::-webkit-scrollbar{
+	display: none;
+}
+
+.home-category-mobile__item{
+
+	flex-shrink: 0;
+}
+
+.home-category-mobile__item:nth-of-type(3n+1) .home-category-mobile__link{
+	background-color: #87afd8;
+}
+
+.home-category-mobile__item:nth-of-type(3n+2) .home-category-mobile__link{
+	background-color: #76c9bd;
+}
+
+.home-category-mobile__item:nth-of-type(3n+3) .home-category-mobile__link{
+	background-color: #88cf81;
+}
+
+.home-category-mobile__link{
+	--line-height: 2rem;
+	font-size: 1.4rem;
+	color: var(--white-color);
+	text-decoration: none;
+	line-height: var(--line-height);
+	max-height: calc(var(--line-height) * 2);
+	text-align: center;
+	width: 110px;
+	display: block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	border-radius: 5px;
+	margin-right: 10px;
+	padding: 0 6px;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+
 .home-product{
 	margin-bottom: 10px;
 }
@@ -1241,7 +1299,7 @@ i.home-product-item__like-icon-fill{
 .home-product-item__sale-off::before{
 	content: "";
 	position: absolute;
-	bottom: -8px;
+	bottom: -7px;
 	right: 0;
 	left: 0;
 	border-width: 0 21px 8px;
